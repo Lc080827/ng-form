@@ -15,6 +15,9 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
         queueLimit: 1,     //文件个数
         removeAfterUpload: true   //上传后删除文件
     });
+    $scope.clearItems = function(){    //重新选择文件时，清空队列，达到覆盖文件的效果
+        uploader.clearQueue();
+    }
     //获取下拉框json数据
     $http({
         method:'GET',
