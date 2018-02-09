@@ -1,0 +1,122 @@
+@charset "utf-8";
+/*清除默认样式*/
+body,p,ul,li,a,input{margin:0;padding:0;text-decoration:none;list-style: none;color:#000;}
+
+body{
+    position:relative;
+    font-size: 0.2rem;
+}
+
+.header{
+    height:0.5rem;
+    line-height: 0.5rem;
+}
+
+.footer{
+    height:2em;
+    line-height: 2em;
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    width:100%;
+}
+
+/*活动提交样式*/
+.content-myhdtj{
+    background: #EBEBED;;
+    padding: 0.15rem;
+}
+.content-myhdtj .head{
+    height:0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.35rem;
+    color: #000;
+    text-align: center;
+    font-weight: 700;
+}
+.content-myhdtj .form{
+    padding:0.15rem;
+    background: #FFF;
+    border-radius: 5px;
+}
+.content-myhdtj .form p{
+    height:0.89rem;
+    line-height: 0.89rem;
+    font-size: 0.3rem;
+    border-bottom: 0.01rem solid #D4D4D4;
+}
+.content-myhdtj .form p.error{
+    border-bottom: 0.01rem solid red;
+}
+.content-myhdtj .form div.error{
+    border-bottom: 0.01rem solid red;
+}
+.content-myhdtj .form p span{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    display: inline-block;
+}
+.content-myhdtj .form p input{
+    height:0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.3rem;
+    border: none;
+    position: relative;
+    top:0.25rem;
+    float:right;
+    width:70%;
+}
+.content-myhdtj .form p input:focus{
+    outline: none;
+}
+.content-myhdtj .form p .demo-input{
+    width:60%;
+    height:0.5rem;
+    line-height: 0.5rem;
+    border:0.01rem solid #ccc;
+    border-radius: 5px;
+}
+.content-myhdtj .form p select{
+    height:0.45rem;
+    line-height: 0.45rem;
+    font-size: 0.3rem;
+    position: relative;
+    top:0.25rem;
+    float:right;
+    width:60%;
+    border-radius: 5px;
+}
+.content-myhdtj .form p select:focus{
+    outline: none;
+}
+.content-myhdtj .form div{
+    font-size: 0.3rem;
+}
+.content-myhdtj .form div span{
+    display: inline-block;
+    padding: 0.3rem 0 0.1rem 0;
+}
+.content-myhdtj .form div textarea{
+    width:100%;
+    display: inline-block;
+    background: #F4F4F4;
+    font-size: 0.3rem;
+}
+.content-myhdtj .form .submit{
+    width:100%;
+    display: block;
+    height:0.8rem;
+    line-height: 0.8rem;
+    background: #50a250;
+    color:#FFF;
+    text-align: center;
+    font-size:0.35rem;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.content-myhdtj .form .submit:focus{
+    outline: none;
+}
+.content-myhdtj .form .submit:disabled{
+    /*color:#ccc;*/
+    background: #636b63;
+}

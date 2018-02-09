@@ -1,0 +1,21 @@
+<div class="content-myhdtj">
+    <p class="head">表单提交</p>
+    <form role="form" name="myhdtjFrom" accept-charset="utf-8">
+        <div class="form">
+            <p ng-class="{'error':myhdtjFrom.hdtjName.$error.required }"><span>用户名:</span><input type="text" name="hdtjName" ng-model="hdtjName" placeholder="请输入用户名" required /></p>
+            <p ng-class="{'error':(myhdtjFrom.hdtjPwd.$error.required || myhdtjFrom.hdtjPwd.$invalid) }"><span>密 码:</span><input type="password" name="hdtjPwd" ng-model="hdtjPwd" placeholder="请输入密码" required ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,21}$/"></p>
+            <p ng-class="{'error':(myhdtjFrom.hdtjPhone.$error.required || myhdtjFrom.hdtjPhone.$invalid)}"><span>手机号:</span><input type="text" name="hdtjPhone" ng-model="hdtjPhone" placeholder="请输入您的手机号" required ng-pattern="/^1[3|4|5|8][0-9]\d{8,8}$/"></p>
+            <p ng-class="{'error':(myhdtjFrom.hdtjEmail.$error.required || myhdtjFrom.hdtjEmail.$invalid)}"><span>邮 箱:</span><input type="text" name="hdtjEmail" ng-model="hdtjEmail" ng-pattern="/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/" placeholder="请输入您的邮箱号" required></p>
+            <p><span>所属服务中心:</span>
+                <select ng-options="item.name for item in selectList" ng-model="selectName"></select>
+            </p>
+            <p><span>活动开始时间:</span><input ngc-lay-date type="text" class="demo-input" placeholder="请选择活动开始时间" id="startTime1" ng-model="startTime1" datetime="datetime"></p>
+            <p><span>至活动时间:</span><input ngc-lay-date type="text" class="demo-input" placeholder="请选择活动开始时间" id="startTime2" ng-model="startTime2" datetime="datetime"></p>
+            <p><span>活动结束时间:</span><input ngc-lay-date type="text" class="demo-input" placeholder="请选择活动结束时间" id="endTime" ng-model="endTime" datetime="datetime"></p>
+            <div><span>活动简介:</span>500/<span ng-bind="left()"></span><textarea ng-model="hdjj" cols="30" rows="10" placeholder="请输入活动简介文字描述" maxlength="500"></textarea></div>
+            <input ng-disabled="myhdtjFrom.hdtjName.$error.required || myhdtjFrom.hdtjPwd.$error.required || myhdtjFrom.hdtjPwd.$invalid || myhdtjFrom.hdtjPhone.$error.required || myhdtjFrom.hdtjPhone.$invalid || myhdtjFrom.hdtjEmail.$error.required || myhdtjFrom.hdtjEmail.$invalid" ng-click="submit()" value="提交申请" class="submit">
+        </div>
+    </form>
+    </div>
+</div>
+
