@@ -1,4 +1,4 @@
-var app = angular.module('myapp',['ngRoute']);
+var app = angular.module('myapp',['ngRoute','angularFileUpload']);
 app.config(['$routeProvider',function($routeProvider){
     $routeProvider
     .when('/',{
@@ -8,7 +8,13 @@ app.config(['$routeProvider',function($routeProvider){
 }]);
 
 //表单提交控制器
-app.controller('myhdtjFromController',function($scope,$http){
+app.controller('myhdtjFromController',function($scope,$http,FileUploader){
+    //上传图片并预览展示
+    var uploader = $scope.uploader = new FileUploader({
+        url: 'upload.php',
+        queueLimit: 1,     //文件个数
+        removeAfterUpload: true   //上传后删除文件
+    });
     //获取下拉框json数据
     $http({
         method:'GET',
@@ -19,7 +25,6 @@ app.controller('myhdtjFromController',function($scope,$http){
     }),function(error){
         console.log(error);
     }
-    // $scope.hdtjName = "jack";
     //输入框最大字数限制
     $scope.hdjj = "";
     $scope.left = function(){ return 500-$scope.hdjj.length;}
