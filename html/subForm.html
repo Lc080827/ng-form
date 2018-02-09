@@ -13,6 +13,7 @@
             <p><span>至活动时间:</span><input ngc-lay-date type="text" class="demo-input" placeholder="请选择活动开始时间" id="startTime2" ng-model="startTime2" datetime="datetime"></p>
             <p><span>活动结束时间:</span><input ngc-lay-date type="text" class="demo-input" placeholder="请选择活动结束时间" id="endTime" ng-model="endTime" datetime="datetime"></p>
             <div><span>活动简介:</span>500/<span ng-bind="left()"></span><textarea ng-model="hdjj" cols="30" rows="10" placeholder="请输入活动简介文字描述" maxlength="500"></textarea></div>
+            <div><span>活动图片:</span><img src="images/peoplestyle_03.png" /> </div>
             <input ng-disabled="myhdtjFrom.hdtjName.$error.required || myhdtjFrom.hdtjPwd.$error.required || myhdtjFrom.hdtjPwd.$invalid || myhdtjFrom.hdtjPhone.$error.required || myhdtjFrom.hdtjPhone.$invalid || myhdtjFrom.hdtjEmail.$error.required || myhdtjFrom.hdtjEmail.$invalid" ng-click="submit()" value="提交申请" class="submit">
         </div>
     </form>
