@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bfa46b-90bd-4d15-8b4c-436e6fe88960" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change beforePath="$PROJECT_DIR$/html/subForm.html" afterPath="$PROJECT_DIR$/html/subForm.html" />
       <change beforePath="$PROJECT_DIR$/js/controller.js" afterPath="$PROJECT_DIR$/js/controller.js" />
@@ -21,8 +22,8 @@
       <file leaf-file-name="subForm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/subForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="23" />
+            <state relative-caret-position="388">
+              <caret line="25" column="81" lean-forward="false" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -31,10 +32,10 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+            <state relative-caret-position="234">
+              <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
               <folding>
-                <element signature="e#2855#4507#0" expanded="false" />
+                <element signature="e#3127#4779#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,6 +61,7 @@
       <find>render</find>
       <find>thumb_default</find>
       <find>imgSrc</find>
+      <find>.content-myhdtj .form div button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,12 +193,12 @@
       <updated>1517987739827</updated>
       <workItem from="1517987741177" duration="7913000" />
       <workItem from="1518059683564" duration="44482000" />
-      <workItem from="1518315155803" duration="8719000" />
+      <workItem from="1518315155803" duration="10210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61114000" />
+    <option name="totallyTimeSpent" value="62605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -245,7 +247,7 @@
         <state relative-caret-position="380">
           <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
-            <element signature="e#2855#4507#0" expanded="false" />
+            <element signature="e#3127#4779#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -286,7 +288,7 @@
         <state relative-caret-position="60">
           <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
           <folding>
-            <element signature="e#2855#4507#0" expanded="false" />
+            <element signature="e#3127#4779#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -408,26 +410,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="158" column="16" lean-forward="false" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
+        <state relative-caret-position="102">
+          <caret line="188" column="28" lean-forward="true" selection-start-line="188" selection-start-column="28" selection-end-line="188" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/subForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="388">
+          <caret line="25" column="81" lean-forward="false" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+        <state relative-caret-position="234">
+          <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
           <folding>
-            <element signature="e#2855#4507#0" expanded="false" />
+            <element signature="e#3127#4779#0" expanded="false" />
           </folding>
         </state>
       </provider>

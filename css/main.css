@@ -153,10 +153,13 @@ body{
     display: inline-block;
     padding: 0.3rem 0 0.1rem 0;
 }
-.content-myhdtj .form div ul li{
+.content-myhdtj .form div.showObj ul li{
     height: 0.3rem;
     line-height: 0.3rem;
     margin: 0.15rem;
+}
+.content-myhdtj .form div.showpic{
+    border-bottom: 0.01rem solid #ccc;
 }
 .content-myhdtj .form div textarea{
     width:100%;
@@ -185,6 +188,7 @@ body{
 }
 .content-myhdtj .form .ispicsty{
     text-align: center;
+    margin:0 0 0.1rem 0;
 }
 .content-myhdtj .form div button{
     border: none;

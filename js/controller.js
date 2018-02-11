@@ -48,6 +48,12 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
         });
         $scope.text="";
     };
+    if( $scope.todoList!=null && $scope.todoList.length>0 ){
+        var fd = new FormData();
+        var userScoreRecords = angular.toJson($scope.todoList);//把对象(集合)转换为json串
+        debugger;
+        fd.append('userScoreRecords', userScoreRecords); //参数放入formData中
+    }
 
     $scope.submit = function(){
         $http({

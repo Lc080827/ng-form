@@ -15,7 +15,7 @@
             <div><span>活动简介:</span>500/<span ng-bind="left()"></span><textarea ng-model="hdjj" cols="30" rows="10" placeholder="请输入活动简介文字描述" maxlength="500"></textarea></div>
             <!--活动内容-->
             <div><span>活动内容:</span>500/<span ng-bind="left1()"></span><textarea ng-model="hdnr" cols="30" rows="10" placeholder="请文字描述活动内容" maxlength="500"></textarea></div>
-            <div><span>活动图片:</span><input type="file" accept="image/gif,image/jpeg,image/png" nv-file-select uploader="uploader" ng-click="clearItems()" ng-model="filepic" />
+            <div class="showpic"><span>活动图片:</span><input type="file" accept="image/gif,image/jpeg,image/png" nv-file-select uploader="uploader" ng-click="clearItems()" ng-model="filepic" />
                 <ul>
                     <li ng-repeat="item in uploader.queue">
                         <div ng-class="{'ispicsty':picsty}" ng-show="uploader.isHTML5" ng-thumb="{file: item._file, width:200}"></div>
@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <p class="addObj"><span>活动对象:</span><input type="text" ng-model="text" size="30" placeholder="添加活动对象"><button type="button" ng-click="add()">添加</button></p>
-            <div>
+            <div class="showObj">
                 <ul>
                     <li ng-repeat="item in todoList">
                         {{$index+1}}.{{item.text}}
