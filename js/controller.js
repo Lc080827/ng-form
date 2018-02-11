@@ -40,6 +40,15 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
     $scope.left1 = function(){ return 500-$scope.hdnr.length;}
     //活动日期
 
+    //todolist
+    $scope.todoList = [];
+    $scope.add = function(){
+        $scope.todoList.push({
+           text:$scope.text
+        });
+        $scope.text="";
+    };
+
     $scope.submit = function(){
         $http({
             method:'get',

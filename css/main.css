@@ -65,6 +65,24 @@ body{
     float:right;
     width:70%;
 }
+.content-myhdtj .form p.addObj input{
+    width:60%;
+    float:none;
+    position: static;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 0.1rem;
+}
+.content-myhdtj .form p.addObj button{
+    float:right;
+    position: relative;
+    top:0.25rem;
+    width:15%;
+    height:0.4rem;
+    line-height: 0.4rem;
+    border: none;
+    border-radius: 5px;
+}
 .content-myhdtj .form p input:focus{
     outline: none;
 }
@@ -134,6 +152,11 @@ body{
 .content-myhdtj .form div span{
     display: inline-block;
     padding: 0.3rem 0 0.1rem 0;
+}
+.content-myhdtj .form div ul li{
+    height: 0.3rem;
+    line-height: 0.3rem;
+    margin: 0.15rem;
 }
 .content-myhdtj .form div textarea{
     width:100%;

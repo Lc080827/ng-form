@@ -23,7 +23,14 @@
                     </li>
                 </ul>
             </div>
-            <p class="addObj"><span>活动对象:</span><input type="text"><button type="button">添加</button></p>
+            <p class="addObj"><span>活动对象:</span><input type="text" ng-model="text" size="30" placeholder="添加活动对象"><button type="button" ng-click="add()">添加</button></p>
+            <div>
+                <ul>
+                    <li ng-repeat="item in todoList">
+                        {{$index+1}}.{{item.text}}
+                    </li>
+                </ul>
+            </div>
 
             <input ng-disabled="myhdtjFrom.hdtjName.$error.required || myhdtjFrom.hdtjPwd.$error.required || myhdtjFrom.hdtjPwd.$invalid || myhdtjFrom.hdtjPhone.$error.required || myhdtjFrom.hdtjPhone.$invalid || myhdtjFrom.hdtjEmail.$error.required || myhdtjFrom.hdtjEmail.$invalid" ng-click="submit()" value="提交申请" class="submit">
         </div>
