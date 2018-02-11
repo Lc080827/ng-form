@@ -160,3 +160,25 @@ body{
     /*color:#ccc;*/
     background: #636b63;
 }
+.content-myhdtj .form .ispicsty{
+    text-align: center;
+}
+.content-myhdtj .form div button{
+    border: none;
+    margin: 0.06rem 0 0 0.06rem;
+    border-radius: 5px;
+    padding: 5px;
+    width: 2rem;
+    background: #ccc;
+    font-size: 0.25rem;
+    text-align: center;
+}
+.content-myhdtj .form div canvas {
+    width:90%;
+    background-color: #f3f3f3;
+    -webkit-box-shadow: 0.03rem 0.03rem 0.03rem 0 #e3e3e3;
+    -moz-box-shadow: 0.03rem 0.03rem 0.03rem 0 #e3e3e3;
+    box-shadow: 0.03rem 0.03rem 0.03rem 0 #e3e3e3;
+    border: 0.01rem solid #c3c3c3;
+    margin: 0.06rem 0 0 0.06rem;
+}

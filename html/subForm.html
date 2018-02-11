@@ -13,13 +13,18 @@
             <p><span>至活动时间:</span><input ngc-lay-date type="text" class="demo-input" placeholder="请选择活动开始时间" id="startTime2" ng-model="startTime2" datetime="datetime"></p>
             <p><span>活动结束时间:</span><input ngc-lay-date type="text" class="demo-input" placeholder="请选择活动结束时间" id="endTime" ng-model="endTime" datetime="datetime"></p>
             <div><span>活动简介:</span>500/<span ng-bind="left()"></span><textarea ng-model="hdjj" cols="30" rows="10" placeholder="请输入活动简介文字描述" maxlength="500"></textarea></div>
-            <div><span>活动图片:</span><input type="file" accept="image/*" nv-file-select uploader="uploader" ng-click="clearItems()" />
+            <!--活动内容-->
+            <div><span>活动内容:</span>500/<span ng-bind="left1()"></span><textarea ng-model="hdnr" cols="30" rows="10" placeholder="请文字描述活动内容" maxlength="500"></textarea></div>
+            <div><span>活动图片:</span><input type="file" accept="image/gif,image/jpeg,image/png" nv-file-select uploader="uploader" ng-click="clearItems()" ng-model="filepic" />
                 <ul>
                     <li ng-repeat="item in uploader.queue">
-                        <span ng-bind="item.file.name"></span><br/>
+                        <div ng-class="{'ispicsty':picsty}" ng-show="uploader.isHTML5" ng-thumb="{file: item._file, width:200}"></div>
+                        <div ng-class="{'ispicsty':picsty}"><button type="button" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading">上传</button></div>
                     </li>
                 </ul>
             </div>
+            <p class="addObj"><span>活动对象:</span><input type="text"><button type="button">添加</button></p>
+
             <input ng-disabled="myhdtjFrom.hdtjName.$error.required || myhdtjFrom.hdtjPwd.$error.required || myhdtjFrom.hdtjPwd.$invalid || myhdtjFrom.hdtjPhone.$error.required || myhdtjFrom.hdtjPhone.$invalid || myhdtjFrom.hdtjEmail.$error.required || myhdtjFrom.hdtjEmail.$invalid" ng-click="submit()" value="提交申请" class="submit">
         </div>
     </form>

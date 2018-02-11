@@ -10,14 +10,19 @@ app.config(['$routeProvider',function($routeProvider){
 //表单提交控制器
 app.controller('myhdtjFromController',function($scope,$http,FileUploader){
     //上传图片并预览展示
+    $scope.picsty = true;
     var uploader = $scope.uploader = new FileUploader({
-        url: 'upload.php',
+        url: 'a.txt',
         queueLimit: 1,     //文件个数
         removeAfterUpload: true   //上传后删除文件
     });
     $scope.clearItems = function(){    //重新选择文件时，清空队列，达到覆盖文件的效果
         uploader.clearQueue();
     }
+    //上传文件成功
+    uploader.onSuccessItem = function(fileItem, response, status, headers) {
+        console.info('onSuccessItem', fileItem, response, status, headers);
+    };
     //获取下拉框json数据
     $http({
         method:'GET',
@@ -30,7 +35,9 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
     }
     //输入框最大字数限制
     $scope.hdjj = "";
+    $scope.hdnr = "";
     $scope.left = function(){ return 500-$scope.hdjj.length;}
+    $scope.left1 = function(){ return 500-$scope.hdnr.length;}
     //活动日期
 
     $scope.submit = function(){
@@ -44,7 +51,9 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
                 hdtjPhone:$scope.hdtjPhone, //电话
                 hdtjEmail:$scope.hdtjEmail, //邮箱
                 hdjj:$scope.hdjj,  //描述
+                hdnr:$scope.hdnr,  //内容
                 selectName:$scope.selectName, //下拉框值
+                // filepic:$scope.filepic,      //图片
                 startTime1:$scope.startTime1 //报名时间1
                 // startTime2:$scope.startTime2, //报名时间2
                 // endTime:$scope.endTime //结束时间
@@ -61,6 +70,7 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
             $scope.hdtjPhone=""; //电话
             $scope.hdtjEmail=""; //邮箱
             $scope.hdjj="";  //描述
+            $scope.hdnr="";
 
         }),function(){
             swal('系统错误，请稍后再试！',{
