@@ -23,6 +23,11 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
     uploader.onSuccessItem = function(fileItem, response, status, headers) {
         console.info('onSuccessItem', fileItem, response, status, headers);
     };
+    uploader.onAfterAddingFile = function(fileItem) {
+        $scope.fileItem = fileItem._file;    //添加文件之后，把文件信息赋给scope
+        console.log($scope.fileItem);
+    };
+
     //获取下拉框json数据
     $http({
         method:'GET',
@@ -38,7 +43,6 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
     $scope.hdnr = "";
     $scope.left = function(){ return 500-$scope.hdjj.length;}
     $scope.left1 = function(){ return 500-$scope.hdnr.length;}
-    //活动日期
 
     //todolist
     $scope.todoList = [];
@@ -48,12 +52,6 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
         });
         $scope.text="";
     };
-    if( $scope.todoList!=null && $scope.todoList.length>0 ){
-        var fd = new FormData();
-        var userScoreRecords = angular.toJson($scope.todoList);//把对象(集合)转换为json串
-        debugger;
-        fd.append('userScoreRecords', userScoreRecords); //参数放入formData中
-    }
 
     $scope.submit = function(){
         $http({
@@ -68,10 +66,11 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
                 hdjj:$scope.hdjj,  //描述
                 hdnr:$scope.hdnr,  //内容
                 selectName:$scope.selectName, //下拉框值
-                // filepic:$scope.filepic,      //图片
-                startTime1:$scope.startTime1 //报名时间1
-                // startTime2:$scope.startTime2, //报名时间2
-                // endTime:$scope.endTime //结束时间
+                // filepic:$scope.picsty,      //图片
+                startTime1:$scope.startTime1, //报名时间1
+                startTime2:$scope.startTime2, //报名时间2
+                endTime:$scope.endTime, //结束时间
+                todoList:angular.toJson($scope.todoList)  //将todoList值转化成json数据传递
             }
         }).then(function(){
             swal('提交成功',{
@@ -96,15 +95,16 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
         }
     }
 });
-//自定义指令封装日期
+
+// 自定义指令封装日期
 app.directive('ngcLayDate', function($timeout) {
     return {
         require: '?ngModel',
         restrict: 'A',
         scope: {
-            ngModel: '=',
-            maxDate:'@',
-            minDate:'@'
+            ngModel: '='
+            // maxDate:'@',
+            // minDate:'@'
         },
         link: function(scope, element, attr, ngModel) {
             var _date = null,_config={};
@@ -115,16 +115,16 @@ app.directive('ngcLayDate', function($timeout) {
                     elem: '#' + attr.id,
                     format: attr.format != undefined && attr.format != '' ? attr.format : 'yyyy/MM/dd HH:mm:ss',
                     type:attr.datetime,
-                    // range:attr.range,
-                    // max:attr.hasOwnProperty('maxDate')?attr.maxDate:'',
-                    // min:attr.hasOwnProperty('minDate')?attr.minDate:'',
+                    calendar: true,
+                    done: function(value, date, endDate){
+                        ngModel.$setViewValue(value); //得到日期生成的值，如：2017-08-18
+                    },
                     choose: function(data) {
                         scope.$apply(setViewValue);
-
                     },
                     clear:function(){
                         ngModel.$setViewValue(null);
-                    }
+                    },
                 };
                 // 初始化
                 _date= laydate.render(_config);
