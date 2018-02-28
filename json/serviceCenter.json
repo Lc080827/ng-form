@@ -16,5 +16,27 @@
         "id": 1234578,
         "name": "田心居委党群服务工作室"
     }
-]
+    ],
+    "photos":[
+        {
+            "id":123123123,
+            "title":"简约正月十五元宵节原创手绘海报",
+            "pic":"http://pic.qiantucdn.com/images/banner/5a956a7804906.png"
+        },
+        {
+            "id":123123124,
+            "title":"简约正月十五元宵节原创手绘海报",
+            "pic":"http://pic.qiantucdn.com/images/banner/5a9615bd2e637.jpg"
+        },
+        {
+            "id":123123125,
+            "title":"简约正月十五元宵节原创手绘海报",
+            "pic":"http://pic.qiantucdn.com/images/banner/5a8ac2eecfb7b.jpg"
+        },
+        {
+            "id":123123126,
+
+            "pic":"http://pic.qiantucdn.com/images/banner/5a9136ef8d509.jpg"
+        }
+    ]
 }

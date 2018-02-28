@@ -209,3 +209,13 @@ body{
     border: 0.01rem solid #c3c3c3;
     margin: 0.06rem 0 0 0.06rem;
 }
+
+/*轮播图*/
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{
+    position: relative;
+    top:-0.6rem;
+}
+.bx-controls{
+    position: absolute;
+    left:44%;
+}
