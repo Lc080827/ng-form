@@ -7,6 +7,12 @@ app.config(['$routeProvider',function($routeProvider){
     });
 }]);
 
+//组件复用
+app.component("lunbo",{
+    templateUrl:'component/lunbo.html',
+    controller:'lunboController'
+});
+
 //表单提交控制器
 app.controller('myhdtjFromController',function($scope,$http,FileUploader){
     //上传图片并预览展示
@@ -94,19 +100,22 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
             });
         }
     }
+});
 
-    $http({
-        method:'GET',
-        url:'json/serviceCenter.json',
-        params:{
-            columnId:4
-        }
-    }).then(function(data){
-        $scope.picList = data.data.photos;
-        for(var i=0;i<$scope.picList.length;i++){
-            $scope.picList[i].url = 'json/serviceCenter.json?docId='+$scope.picList[i].id;
-        }
-    });
+//轮播图控制器
+app.controller("lunboController",function($scope,$http){
+   $http({
+      method:'GET',
+      url:'json/serviceCenter.json',
+      params:{
+          columnId:4
+      }
+   }).then(function(data){
+       $scope.picList = data.data.photos;
+       for(var i=0;i<$scope.picList.length;i++){
+           $scope.picList[i].url = 'json/serviceCenter.json?docId='+$scope.picList[i].id;
+       }
+   });
     //轮播图
     setTimeout(function(){$('#sliderBox').bxSlider({
         mode:'horizontal', //默认的是水平
@@ -119,11 +128,6 @@ app.controller('myhdtjFromController',function($scope,$http,FileUploader){
         pause:2000,
     });},0)
 });
-
-//轮播图控制器
-// app.controller("lunboController",function($scope,$http){
-//
-// });
 
 // 自定义指令封装日期
 app.directive('ngcLayDate', function($timeout) {
